@@ -1,0 +1,159 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #f8f8f8;
+    color:white;
+    min-height:100vh;
+}
+/* Main section for messages */
+.messages-section {
+    padding: 50px 20px;
+    text-align: center; /* Center align content */
+}
+
+.messages-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+.year-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding:0 15px;
+    justify-content: center;
+}
+
+
+ .card {
+            width: 100px;
+            height: 200px;
+            background-color: #005f73;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-family: 'Arial', sans-serif;
+            transform: skewY(-10deg);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: skewY(-10deg) scale(1.05);
+        }
+
+
+
+/* Year section */
+.year-section {
+    margin: 40px 0; /* Spacing between years */
+    padding: 20px;
+    background-color: rgba(255, 215, 0, 0.1); /* Light background for year sections */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.year-section h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.year-section ul {
+    list-style: none; /* Remove bullet points */
+}
+
+.year-section ul li {
+    margin-bottom: 10px; /* Space between message links */
+}
+
+.year-section ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #002244; /* Link color */
+    font-size: 18px; /* Font size for links */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.year-section ul li a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+header{
+    background-color: #002244;
+    padding: 20px 0;
+    z-index: 10;
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo h1{
+    color: #ffd700;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin-right: 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:white;
+    font-size:18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    border-radius:5px;
+   
+}
+
+.hamburger{
+    display:none;
+    cursor:pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger .bar{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+nav ul li a:hover{
+    background-color:rgba(255,215,0,0.3);
+    color:#ffd700;
+    box-shadow:0 0 10px #ffd700 0 0 20px #ffd700;
+}
+
+/*  responsive adjustment for smaller screen*/
+@media(max-width:1024px) {
+    .year-grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (max-width:768px) {
+.year-grid{
+    grid-template-columns: repeat(2,1fr);
+    }
+    .year-box{
+        flex: 1 0 calc(50% -10px);
+    }
+}
+
+@media (max-width:480px) {
+.year-grid{
+    grid-template-columns: repeat(1fr);
+    }
+}

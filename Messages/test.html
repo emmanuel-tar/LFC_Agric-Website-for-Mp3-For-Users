@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year Cards</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .card {
+            width: 100px;
+            height: 200px;
+            background-color: #005f73;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-family: 'Arial', sans-serif;
+            transform: skewY(-10deg);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: skewY(-10deg) scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">2020</div>
+        <div class="card">2021</div>
+        <div class="card">2023</div>
+        <div class="card">2024</div>
+        <div class="card">2025</div>
+        <div class="card">2026</div>
+        <div class="card">2027</div>
+        <div class="card">2028</div>
+    </div>
+</body>
+</html>
